@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      enron_emails: {
+        Row: {
+          body: string | null
+          cc: string | null
+          created_at: string
+          date: string | null
+          folder: string | null
+          id: string
+          is_noise: boolean | null
+          message_id: string | null
+          recipients: string | null
+          relevance_score: number | null
+          sender: string
+          subject: string | null
+        }
+        Insert: {
+          body?: string | null
+          cc?: string | null
+          created_at?: string
+          date?: string | null
+          folder?: string | null
+          id?: string
+          is_noise?: boolean | null
+          message_id?: string | null
+          recipients?: string | null
+          relevance_score?: number | null
+          sender: string
+          subject?: string | null
+        }
+        Update: {
+          body?: string | null
+          cc?: string | null
+          created_at?: string
+          date?: string | null
+          folder?: string | null
+          id?: string
+          is_noise?: boolean | null
+          message_id?: string | null
+          recipients?: string | null
+          relevance_score?: number | null
+          sender?: string
+          subject?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
